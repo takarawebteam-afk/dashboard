@@ -88,7 +88,7 @@ header{
 .fsep{width:1px;height:22px;background:var(--border);flex-shrink:0;}
 
 /* メイン */
-main{padding:18px 24px 40px;max-width:1400px;margin:0 auto;}
+main{padding:24px 24px 40px;max-width:1400px;margin:0 auto;}
 .mb{margin-bottom:16px;}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
@@ -122,7 +122,7 @@ main{padding:18px 24px 40px;max-width:1400px;margin:0 auto;}
 .badge{font-size:10px;padding:2px 9px;border-radius:4px;background:var(--blue-pale);color:var(--blue);font-weight:600;}
 
 /* チャート */
-.cw canvas{max-height:260px;width:100%!important;}
+.cw canvas{max-height:300px;width:100%!important;}
 .cwl canvas{max-height:300px;width:100%!important;}
 
 /* ランクリスト */
@@ -600,7 +600,7 @@ function buildHankyou(){
   const mL=Object.keys(mediaMap),mV=Object.values(mediaMap),tot=mV.reduce((a,b)=>a+b,0);
   CHARTS_H.pie=new Chart('mediaPie',{type:'doughnut',
     data:{labels:mL,datasets:[{data:mV,backgroundColor:mL.map((l,i)=>gc(l,i)),borderWidth:2,borderColor:'white'}]},
-    options:{plugins:{legend:{position:'right',labels:LEG.labels},
+    options:{plugins:{legend:{position:'bottom',labels:{...LEG.labels,boxWidth:12,padding:8}},
       tooltip:{callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}件 (${(ctx.parsed/tot*100).toFixed(1)}%)`}}}}});
 
   mkRank('mediaRank',mediaMap);
