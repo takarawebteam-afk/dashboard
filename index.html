@@ -95,7 +95,7 @@ main{padding:18px 24px 40px;max-width:1400px;margin:0 auto;}
 .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 
 /* KPI */
-.kpi-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:18px;}
+.kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px;}
 .kcard{
   background:white;border:1px solid var(--border);border-radius:8px;
   padding:16px 20px;box-shadow:var(--shadow);
@@ -154,12 +154,12 @@ main{padding:18px 24px 40px;max-width:1400px;margin:0 auto;}
 .funnel-val{font-size:12px;font-weight:700;color:var(--blue);width:60px;flex-shrink:0;}
 
 @media(max-width:900px){
-  .kpi-row{grid-template-columns:repeat(3,1fr);}
+  .kpi-row{grid-template-columns:repeat(2,1fr);}
   .g2,.g3,.g4{grid-template-columns:1fr;}
   main{padding:12px 12px 32px;}
 }
 @media(max-width:600px){
-  .kpi-row{grid-template-columns:1fr 1fr;}
+  .kpi-row{grid-template-columns:1fr;}
   .page-tab{padding:10px 16px;font-size:12px;}
 }
 </style>
